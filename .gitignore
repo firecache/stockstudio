@@ -1,0 +1,17 @@
+# 真实行情数据（体积大，不提交 git）
+backend/data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# uni-app / HBuilderX
+app/unpackage/
+node_modules/
+.hbuilderx/
+
+# OS
+.DS_Store
+Thumbs.db
