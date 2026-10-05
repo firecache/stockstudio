@@ -8,6 +8,8 @@ DATA_DIR = ROOT / "data"
 DAILY_DIR = DATA_DIR / "daily"        # daily/{fq}/{code}.parquet   fq in {qfq, raw}
 MINUTE_DIR = DATA_DIR / "minute"      # minute/{code}_{scale}.parquet
 TIMESHARE_DIR = DATA_DIR / "timeshare"  # timeshare/{code}/{date}.parquet
+TICK_DIR = DATA_DIR / "tick"          # tick/{code}/{date}.parquet
+DIVID_DIR = DATA_DIR / "divid"        # divid/{code}.parquet
 SYMBOLS_FILE = DATA_DIR / "symbols.parquet"
 
 DEFAULT_START = "2010-01-01"
@@ -20,5 +22,5 @@ UA = {
                   "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 }
 
-for d in (DATA_DIR, DAILY_DIR, MINUTE_DIR, TIMESHARE_DIR):
+for d in (DATA_DIR, DAILY_DIR, MINUTE_DIR, TIMESHARE_DIR, TICK_DIR, DIVID_DIR):
     d.mkdir(parents=True, exist_ok=True)

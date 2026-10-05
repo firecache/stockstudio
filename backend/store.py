@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Parquet 存储层。真实数据落盘，无 mock。"""
 import pandas as pd
-from config import DAILY_DIR, MINUTE_DIR, TIMESHARE_DIR, SYMBOLS_FILE
+from config import DAILY_DIR, MINUTE_DIR, TIMESHARE_DIR, TICK_DIR, DIVID_DIR, SYMBOLS_FILE
 
 
 def save_daily(code, bars, fq="qfq"):
@@ -52,3 +52,34 @@ def save_symbols(rows):
 
 def load_symbols():
     return pd.read_parquet(SYMBOLS_FILE) if SYMBOLS_FILE.exists() else None
+
+
+def save_tick(code, date, rows):
+    """分笔。rows: list[dict] {time, price, volume, bs}。"""
+    df = pd.DataFrame(rows)
+    if df.empty:
+        return None
+    path = TICK_DIR / code / f"{date}.parquet"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_parquet(path, index=False)
+    return path
+
+
+def load_tick(code, date):
+    path = TICK_DIR / code / f"{date}.parquet"
+    return pd.read_parquet(path) if path.exists() else None
+
+
+def save_divid(code, rows):
+    """除权因子。rows: list[dict] {date, type, bonus, allot_price, share_bonus, allotment}。"""
+    df = pd.DataFrame(rows)
+    if df.empty:
+        return None
+    path = DIVID_DIR / f"{code}.parquet"
+    df.to_parquet(path, index=False)
+    return path
+
+
+def load_divid(code):
+    path = DIVID_DIR / f"{code}.parquet"
+    return pd.read_parquet(path) if path.exists() else None

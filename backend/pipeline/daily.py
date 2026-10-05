@@ -3,14 +3,16 @@
 import time
 import store
 from config import DEFAULT_START
-from sources import daily_bars
+from sources import resolve
 
 
-def backfill(symbols, start=DEFAULT_START, end=None, fq_list=("qfq", "raw"), resume=True):
+def backfill(symbols, start=DEFAULT_START, end=None, fq_list=("qfq", "raw"),
+             resume=True, source="free"):
     from datetime import datetime, timedelta
     end = end or datetime.now().strftime("%Y-%m-%d")
     # 宽限窗口：end 是今天，但最后交易日可能早于今天(周末/国庆8天)，用 10 天宽限避免重复回填
     grace_end = (datetime.strptime(end, "%Y-%m-%d") - timedelta(days=10)).strftime("%Y-%m-%d")
+    daily_bars = resolve(source, "daily_bars")
     total = len(symbols)
     done = 0
     consecutive_err = 0
@@ -36,15 +38,15 @@ def backfill(symbols, start=DEFAULT_START, end=None, fq_list=("qfq", "raw"), res
         else:
             consecutive_err += 1
             if consecutive_err >= 20:
-                print(f"  [cooldown] 连续 {consecutive_err} 次失败，休眠 1800s 等腾讯限流重置")
+                print(f"  [cooldown] 连续 {consecutive_err} 次失败，休眠 1800s 等限流重置")
                 time.sleep(1800)
                 consecutive_err = 0
             else:
-                time.sleep(20)   # 501 限流冷却
+                time.sleep(20 if source == "free" else 1)   # 免费源限流冷却，tdx 轻冷却
         done += 1
         if i % 50 == 0 or i == total:
-            print(f"[daily] {i}/{total} 完成")
-        time.sleep(0.6)   # 温和限速
+            print(f"[daily:{source}] {i}/{total} 完成")
+        time.sleep(0.6 if source == "free" else 0.05)
     return done
 
 

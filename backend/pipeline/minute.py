@@ -2,11 +2,12 @@
 """数据管道：分钟线（近端），新浪源，1/5/15/30/60 分钟。真实数据。"""
 import time
 import store
-from sources import minute_bars
+from sources import resolve
 from config import MINUTE_SCALES
 
 
-def backfill(symbols, scales=(1, 5, 15, 30, 60), resume=True):
+def backfill(symbols, scales=(1, 5, 15, 30, 60), resume=True, source="free"):
+    minute_bars = resolve(source, "minute_bars")
     total = len(symbols)
     for i, sym in enumerate(symbols, 1):
         code = sym["code"]
@@ -20,8 +21,8 @@ def backfill(symbols, scales=(1, 5, 15, 30, 60), resume=True):
             except Exception as e:
                 print(f"  [{i}/{total}] {code} m{scale} ERROR: {e}")
         if i % 50 == 0 or i == total:
-            print(f"[minute] {i}/{total} 完成")
-        time.sleep(0.1)
+            print(f"[minute:{source}] {i}/{total} 完成")
+        time.sleep(0.1 if source == "free" else 0.05)
     return total
 
 
