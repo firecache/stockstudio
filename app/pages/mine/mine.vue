@@ -6,10 +6,11 @@
     </view>
     <view class="card">
       <text class="kv-title">数据说明</text>
-      <text class="line">日线：腾讯（前复权/不复权，2010 至今）</text>
-      <text class="line">分钟：新浪（1/5/15/30/60，近端）</text>
-      <text class="line">分时：腾讯（当日实时）</text>
-      <text class="line">快照：腾讯（实时）</text>
+      <text class="line">日线：腾讯 / 通达信（前复权/不复权，2010 至今）</text>
+      <text class="line">分钟：新浪 / 通达信（1/5/15/30/60 分钟）</text>
+      <text class="line">分时：腾讯 / 通达信（当日 + 任意历史）</text>
+      <text class="line">快照：腾讯 / 通达信（实时）</text>
+      <text class="line">图表：K 线 / 分时 / 均线，自研 canvas 渲染</text>
       <text class="line warn">全部真实行情数据，无 mock</text>
     </view>
     <view class="card">

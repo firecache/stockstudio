@@ -30,3 +30,8 @@ export function getMinute(code, scale = 5) {
 export function getTimeshare(code) {
   return request(`/timeshare/${code}`)
 }
+
+export function getQuote(codes) {
+  const list = Array.isArray(codes) ? codes.join(',') : codes
+  return request(`/quote?codes=${list}`)
+}

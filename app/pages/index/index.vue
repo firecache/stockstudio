@@ -1,88 +1,106 @@
 <template>
   <view class="page">
-    <view class="hero">
-      <text class="title">stockstudio</text>
-      <text class="sub">真实 A 股行情 · 数据无 mock</text>
+    <view class="header">
+      <text class="app-name">stockstudio</text>
+      <text class="slogan">移动端 A 股看盘</text>
     </view>
 
-    <view class="stat" v-if="symbolCount">
-      <text class="stat-num">{{ symbolCount }}</text>
-      <text class="stat-label">只 A 股已接入</text>
-    </view>
-
-    <view class="card" v-if="maotai">
+    <!-- 自选股 -->
+    <view class="card">
       <view class="card-head">
-        <text class="card-title">贵州茅台</text>
-        <text class="card-code">600519</text>
+        <text class="card-title">自选股</text>
+        <text class="add" @tap="goMarket">＋ 添加</text>
       </view>
-      <view class="row">
-        <text class="price" :class="maotai.up ? 'up' : 'down'">{{ maotai.close }}</text>
-        <text class="change" :class="maotai.up ? 'up' : 'down'">
-          {{ maotai.up ? '+' : '' }}{{ maotai.pct }}%
-        </text>
+      <view v-if="!quotes.length" class="empty">
+        <text class="muted">暂无自选，去行情页搜索添加。</text>
       </view>
-      <text class="muted">最新收盘 · {{ maotai.date }}</text>
+      <view v-for="q in quotes" :key="q.code" class="row">
+        <view class="row-left" @tap="open(q.code)">
+          <text class="r-name">{{ q.name }}</text>
+          <text class="r-code">{{ q.code }}</text>
+        </view>
+        <view class="row-right">
+          <text class="r-price" :style="{ color: (q.pct == null || q.pct >= 0) ? '#e64c3c' : '#2e9e5b' }">{{ fmt(q.price) }}</text>
+          <text class="r-pct" :style="{ background: (q.pct == null || q.pct >= 0) ? '#e64c3c' : '#2e9e5b' }">{{ q.pct == null ? '-' : (q.pct >= 0 ? '+' : '') + q.pct + '%' }}</text>
+          <text class="r-del" @tap="remove(q.code)">✕</text>
+        </view>
+      </view>
     </view>
 
-    <view class="tip">
-      <text class="muted">数据来自腾讯/新浪免费行情源，真实落盘 Parquet 后经 API 返回。</text>
+    <!-- 快捷入口 -->
+    <view class="card">
+      <text class="card-title">快捷入口</text>
+      <view class="entry" @tap="goMarket"><text>行情 · 搜索</text><text class="arrow">›</text></view>
+      <view class="entry" @tap="open('sh600519')"><text>贵州茅台</text><text class="arrow">›</text></view>
+      <view class="entry" @tap="open('sh000001')"><text>上证指数（示例）</text><text class="arrow">›</text></view>
     </view>
   </view>
 </template>
 
 <script>
-import { getSymbols, getKline } from '@/utils/api.js'
+import { getQuote } from '@/utils/api.js'
+
+const DEFAULT_WATCH = ['sh600519', 'sz000001', 'sh601398', 'sz300750', 'sh600036']
+const KEY = 'stockstudio_watch'
 
 export default {
   data() {
-    return { symbolCount: 0, maotai: null }
+    return { watch: [], quotes: [] }
   },
-  onLoad() {
-    this.load()
+  onShow() {
+    this.watch = uni.getStorageSync(KEY) || DEFAULT_WATCH
+    this.refresh()
   },
   methods: {
-    async load() {
+    fmt(v) {
+      return v == null ? '-' : Number(v).toFixed(2)
+    },
+    async refresh() {
+      if (!this.watch.length) { this.quotes = []; return }
       try {
-        const s = await getSymbols()
-        this.symbolCount = s.count
-        const k = await getKline('sh600519', 'qfq', 2)
-        if (k.data && k.data.length >= 2) {
-          const last = k.data[k.data.length - 1]
-          const prev = k.data[k.data.length - 2]
-          const pct = ((last.close - prev.close) / prev.close) * 100
-          this.maotai = {
-            close: last.close,
-            up: last.close >= prev.close,
-            pct: pct.toFixed(2),
-            date: last.date
-          }
-        }
+        const r = await getQuote(this.watch)
+        const map = {}
+        for (const q of (r.data || [])) map[q.code] = q
+        this.quotes = this.watch.map(c => map[c] || { code: c, name: c, price: null, pct: null })
       } catch (e) {
-        console.error(e)
-        uni.showToast({ title: '后端未启动，请运行 backend/server.py', icon: 'none' })
+        this.quotes = []
       }
+    },
+    remove(code) {
+      this.watch = this.watch.filter(c => c !== code)
+      uni.setStorageSync(KEY, this.watch)
+      this.refresh()
+    },
+    open(code) {
+      uni.navigateTo({ url: '/pages/stock/stock?code=' + code })
+    },
+    goMarket() {
+      uni.switchTab({ url: '/pages/market/market' })
     }
   }
 }
 </script>
 
 <style scoped>
-.page { padding: 40rpx; }
-.hero { margin-bottom: 48rpx; }
-.title { display: block; font-size: 56rpx; font-weight: 700; }
-.sub { display: block; font-size: 26rpx; color: #8b949e; margin-top: 8rpx; }
-.stat { display: flex; flex-direction: column; align-items: center; padding: 40rpx; background: #161b22; border-radius: 16rpx; margin-bottom: 24rpx; }
-.stat-num { font-size: 64rpx; font-weight: 700; color: #2f81f7; }
-.stat-label { font-size: 24rpx; color: #8b949e; margin-top: 8rpx; }
-.card { background: #161b22; border-radius: 16rpx; padding: 32rpx; }
-.card-head { display: flex; justify-content: space-between; align-items: center; }
-.card-title { font-size: 34rpx; font-weight: 600; }
-.card-code { font-size: 24rpx; color: #8b949e; }
-.row { display: flex; align-items: baseline; gap: 24rpx; margin-top: 16rpx; }
-.price { font-size: 56rpx; font-weight: 700; }
-.change { font-size: 30rpx; }
-.up { color: #e64c3c; }
-.down { color: #2e9e5b; }
+.page { padding: 20rpx; background: #0d1117; min-height: 100vh; }
+.header { padding: 24rpx 8rpx 32rpx; }
+.app-name { display: block; font-size: 48rpx; font-weight: 700; }
+.slogan { font-size: 26rpx; color: #8b949e; }
+.card { background: #161b22; border-radius: 16rpx; padding: 28rpx; margin-bottom: 24rpx; }
+.card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8rpx; }
+.card-title { font-size: 30rpx; font-weight: 600; }
+.add { font-size: 24rpx; color: #2f81f7; }
+.row { display: flex; align-items: center; justify-content: space-between; padding: 20rpx 0; border-bottom: 1rpx solid #21262d; }
+.row:last-child { border-bottom: none; }
+.row-left { flex: 1; }
+.r-name { display: block; font-size: 30rpx; }
+.r-code { display: block; font-size: 22rpx; color: #8b949e; margin-top: 4rpx; }
+.row-right { display: flex; align-items: center; gap: 16rpx; }
+.r-price { font-size: 30rpx; font-weight: 600; }
+.r-pct { font-size: 24rpx; color: #fff; padding: 4rpx 12rpx; border-radius: 8rpx; min-width: 100rpx; text-align: center; }
+.r-del { font-size: 26rpx; color: #8b949e; padding: 0 8rpx; }
+.empty { padding: 40rpx 0; text-align: center; }
 .muted { font-size: 24rpx; color: #8b949e; }
-.tip { margin-top: 32rpx; }
+.entry { display: flex; justify-content: space-between; align-items: center; padding: 20rpx 0; }
+.arrow { color: #8b949e; font-size: 32rpx; }
 </style>
