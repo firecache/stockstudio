@@ -15,7 +15,10 @@
   6) 实时快照批量 / 行情订阅（subscribe）
 
 代码格式：TDX 用 `600000.SH`，本项目内部用 `sh600000`，此处做双向转换。
-字段单位（官方文档）：OHLC=元，成交量=手，成交额=万元。
+字段单位（实测校准）：
+  get_market_data(日线/分钟)：OHLC=元、volume=股(内部÷100转手)、amount=万元(内部×10000转元)
+  get_minute_data(分时)：volume=手、amount 由均价×累计量估算
+  get_market_snapshot_batch(快照)：volume=手、amount=万元(内部×10000转元)、最高/最低字段名为 Max/Min
 """
 from __future__ import annotations
 
@@ -133,9 +136,11 @@ def _df_to_bars(d, tcode, time_is_date: bool):
                     row[field] = _num(fdf.loc[t, col])
                 except Exception:
                     row[field] = None
-            # 成交额：万元 -> 元（与新浪 minute.amount 口径一致）
+            # TDX 实测单位：volume=股、amount=万元；本项目 schema：volume=手、amount=元
+            if row.get("volume") is not None:
+                row["volume"] = row["volume"] / 100.0   # 股 -> 手
             if row.get("amount") is not None:
-                row["amount"] = row["amount"] * 10000.0
+                row["amount"] = row["amount"] * 10000.0  # 万元 -> 元
             out.append(row)
         return out
     # 无 pandas 兜底：field -> {code: [values]}
@@ -157,8 +162,10 @@ def _df_to_bars(d, tcode, time_is_date: bool):
             seq = vals.get(src, [])
             v = seq[i] if i < len(seq) else None
             row[field] = _num(v)
+        if row.get("volume") is not None:
+            row["volume"] = row["volume"] / 100.0   # 股 -> 手
         if row.get("amount") is not None:
-            row["amount"] = row["amount"] * 10000.0
+            row["amount"] = row["amount"] * 10000.0  # 万元 -> 元
         out.append(row)
     return out
 
@@ -246,8 +253,8 @@ def snapshot(codes):
     tcodes = [to_tdx_code(c) for c in codes]
     d = tqs_mod.get_market_snapshot_batch(
         stock_list=tcodes,
-        field_list=["Code", "Name", "Now", "Open", "High", "Low",
-                    "Volume", "Amount", "LastClose"],
+        field_list=["Code", "Now", "Open", "Max", "Min",
+                    "Volume", "Amount", "LastClose", "Average"],
         return_df=False,
     )
     out = []
@@ -257,12 +264,12 @@ def snapshot(codes):
             continue
         out.append({
             "code": from_tdx_code(tcode),
-            "name": item.get("Name"),
             "price": _num(item.get("Now")),
             "prev_close": _num(item.get("LastClose")),
             "open": _num(item.get("Open")),
-            "high": _num(item.get("High")),
-            "low": _num(item.get("Low")),
+            "high": _num(item.get("Max")),
+            "low": _num(item.get("Min")),
+            "average": _num(item.get("Average")),
             "volume": _num(item.get("Volume")),   # 手
             "amount": (_num(item.get("Amount")) or 0.0) * 10000.0,  # 万元->元
         })
