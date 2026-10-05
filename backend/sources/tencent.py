@@ -5,7 +5,7 @@ import requests
 from config import UA
 
 
-def _get(url, referer="https://gu.qq.com/", retries=3):
+def _get(url, referer="https://gu.qq.com/", retries=5):
     headers = dict(UA)
     headers["Referer"] = referer
     last = None
@@ -17,7 +17,8 @@ def _get(url, referer="https://gu.qq.com/", retries=3):
             last = f"HTTP {r.status_code}"
         except requests.RequestException as e:
             last = str(e)
-        time.sleep(1 + i)
+        # 限流(501/429)与临时错误退避：1,2,4,8,16 秒（封顶 20）
+        time.sleep(min(2 ** i + 1, 20))
     raise RuntimeError(f"tencent fetch failed: {url} ({last})")
 
 

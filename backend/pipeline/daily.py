@@ -31,7 +31,7 @@ def backfill(symbols, start=DEFAULT_START, end=None, fq_list=("qfq", "raw"), res
         done += 1
         if i % 50 == 0 or i == total:
             print(f"[daily] {i}/{total} 完成")
-        time.sleep(0.15)   # 温和限速
+        time.sleep(0.4)   # 温和限速，避免触发腾讯 501 限流
     return done
 
 

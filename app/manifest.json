@@ -1,0 +1,27 @@
+{
+  "name": "stockstudio",
+  "appid": "",
+  "description": "移动端A股看盘App（对标开盘啦）",
+  "versionName": "0.1.0",
+  "versionCode": "100",
+  "vueVersion": "3",
+  "locale": "zh-Hans",
+  "app-plus": {
+    "usingComponents": true,
+    "nvueStyleCompiler": "uni-app",
+    "compilerVersion": 3,
+    "splashscreen": { "alwaysShowBeforeRender": true, "waiting": true },
+    "distribute": {
+      "android": { "permissions": ["<uses-permission android:name=\"android.permission.INTERNET\"/>"] },
+      "ios": {},
+      "sdkConfigs": {}
+    }
+  },
+  "quickapp": {},
+  "mp-weixin": {
+    "appid": "",
+    "setting": { "urlCheck": false },
+    "usingComponents": true
+  },
+  "h5": { "title": "stockstudio" }
+}
