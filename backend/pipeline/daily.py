@@ -27,11 +27,12 @@ def backfill(symbols, start=DEFAULT_START, end=None, fq_list=("qfq", "raw"), res
                     store.save_daily(code, bars, fq)
             except Exception as e:
                 print(f"  [{i}/{total}] {code} {fq} ERROR: {e}")
+                time.sleep(20)   # 501 限流冷却，避免连续触发
                 continue
         done += 1
         if i % 50 == 0 or i == total:
             print(f"[daily] {i}/{total} 完成")
-        time.sleep(0.4)   # 温和限速，避免触发腾讯 501 限流
+        time.sleep(0.6)   # 温和限速，避免触发腾讯 501 限流
     return done
 
 
