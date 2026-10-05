@@ -7,8 +7,10 @@ from sources import daily_bars
 
 
 def backfill(symbols, start=DEFAULT_START, end=None, fq_list=("qfq", "raw"), resume=True):
-    from datetime import datetime
+    from datetime import datetime, timedelta
     end = end or datetime.now().strftime("%Y-%m-%d")
+    # 宽限窗口：end 是今天，但最后交易日可能早于今天(周末/国庆8天)，用 10 天宽限避免重复回填
+    grace_end = (datetime.strptime(end, "%Y-%m-%d") - timedelta(days=10)).strftime("%Y-%m-%d")
     total = len(symbols)
     done = 0
     consecutive_err = 0
@@ -16,10 +18,10 @@ def backfill(symbols, start=DEFAULT_START, end=None, fq_list=("qfq", "raw"), res
         code = sym["code"]
         ok_any = False
         for fq in fq_list:
-            # 断点续传：已存在且最后一根接近今天则跳过
+            # 断点续传：已存在且最后一根在宽限窗口内则跳过
             if resume:
                 existing = store.load_daily(code, fq)
-                if existing is not None and len(existing) > 0 and existing["date"].max() >= end:
+                if existing is not None and len(existing) > 0 and existing["date"].max() >= grace_end:
                     ok_any = True
                     continue
             try:
