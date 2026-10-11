@@ -1,0 +1,61 @@
+[timeshare:free] 50/5572 完成
+[timeshare:free] 100/5572 完成
+[timeshare:free] 150/5572 完成
+[timeshare:free] 200/5572 完成
+[timeshare:free] 250/5572 完成
+[timeshare:free] 300/5572 完成
+[timeshare:free] 350/5572 完成
+[timeshare:free] 400/5572 完成
+[timeshare:free] 450/5572 完成
+[timeshare:free] 500/5572 完成
+[timeshare:free] 550/5572 完成
+[timeshare:free] 600/5572 完成
+[timeshare:free] 650/5572 完成
+[timeshare:free] 700/5572 完成
+[timeshare:free] 750/5572 完成
+[timeshare:free] 800/5572 完成
+[timeshare:free] 850/5572 完成
+[timeshare:free] 900/5572 完成
+[timeshare:free] 950/5572 完成
+[timeshare:free] 1000/5572 完成
+[timeshare:free] 1050/5572 完成
+[timeshare:free] 1100/5572 完成
+[timeshare:free] 1150/5572 完成
+  [1159/5572] sh601162 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601162 (HTTP 501)
+  [1160/5572] sh601163 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601163 (HTTP 501)
+  [1161/5572] sh601166 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601166 (HTTP 501)
+  [1162/5572] sh601168 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601168 (HTTP 501)
+  [1163/5572] sh601169 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601169 (HTTP 501)
+  [1164/5572] sh601177 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601177 (HTTP 501)
+  [1165/5572] sh601179 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601179 (HTTP 501)
+  [1166/5572] sh601186 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601186 (HTTP 501)
+  [1167/5572] sh601187 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601187 (HTTP 501)
+  [1168/5572] sh601188 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601188 (HTTP 501)
+  [1169/5572] sh601198 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601198 (HTTP 501)
+  [1170/5572] sh601199 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601199 (HTTP 501)
+  [1171/5572] sh601200 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601200 (HTTP 501)
+  [1172/5572] sh601208 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601208 (HTTP 501)
+  [1173/5572] sh601211 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601211 (HTTP 501)
+  [1174/5572] sh601212 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601212 (HTTP 501)
+  [1175/5572] sh601216 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601216 (HTTP 501)
+  [1176/5572] sh601218 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601218 (HTTP 501)
+  [1177/5572] sh601222 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601222 (HTTP 501)
+  [1178/5572] sh601225 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601225 (HTTP 501)
+  [cooldown] 连续 20 次失败，休眠 300s 等腾讯限流重置
+  [1179/5572] sh601226 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601226 (HTTP 501)
+  [1180/5572] sh601228 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601228 (HTTP 501)
+  [1181/5572] sh601229 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601229 (HTTP 501)
+  [1182/5572] sh601231 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601231 (HTTP 501)
+  [1183/5572] sh601233 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601233 (HTTP 501)
+  [1184/5572] sh601236 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601236 (HTTP 501)
+  [1185/5572] sh601238 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601238 (HTTP 501)
+  [1186/5572] sh601279 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601279 (HTTP 501)
+  [1187/5572] sh601288 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601288 (HTTP 501)
+  [1188/5572] sh601298 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601298 (HTTP 501)
+  [1189/5572] sh601311 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601311 (HTTP 501)
+  [1191/5572] sh601319 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601319 (HTTP 501)
+  [1192/5572] sh601326 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601326 (HTTP 501)
+  [1193/5572] sh601328 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601328 (HTTP 501)
+  [1194/5572] sh601330 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601330 (HTTP 501)
+  [1195/5572] sh601333 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601333 (HTTP 501)
+  [1196/5572] sh601336 ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/minute/query?code=sh601336 (HTTP 501)

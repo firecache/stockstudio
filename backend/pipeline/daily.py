@@ -19,6 +19,7 @@ def backfill(symbols, start=DEFAULT_START, end=None, fq_list=("qfq", "raw"),
     for i, sym in enumerate(symbols, 1):
         code = sym["code"]
         ok_any = False
+        did_fetch = False
         for fq in fq_list:
             # 断点续传：已存在且最后一根在宽限窗口内则跳过
             if resume:
@@ -28,25 +29,28 @@ def backfill(symbols, start=DEFAULT_START, end=None, fq_list=("qfq", "raw"),
                     continue
             try:
                 bars = daily_bars(code, start, end, fq=fq)
+                did_fetch = True
                 if bars:
                     store.save_daily(code, bars, fq)
                 ok_any = True
             except Exception as e:
+                did_fetch = True
                 print(f"  [{i}/{total}] {code} {fq} ERROR: {e}")
         if ok_any:
             consecutive_err = 0
         else:
             consecutive_err += 1
             if consecutive_err >= 20:
-                print(f"  [cooldown] 连续 {consecutive_err} 次失败，休眠 1800s 等限流重置")
-                time.sleep(1800)
+                print(f"  [cooldown] 连续 {consecutive_err} 次失败，休眠 300s 等腾讯限流重置")
+                time.sleep(300)
                 consecutive_err = 0
             else:
                 time.sleep(20 if source == "free" else 1)   # 免费源限流冷却，tdx 轻冷却
         done += 1
         if i % 50 == 0 or i == total:
             print(f"[daily:{source}] {i}/{total} 完成")
-        time.sleep(0.6 if source == "free" else 0.05)
+        if did_fetch:
+            time.sleep(1.2 if source == "free" else 0.05)
     return done
 
 

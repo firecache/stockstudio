@@ -1,0 +1,150 @@
+[错误] Invalid server response
+  [1/5572] bj920000 qfq ERROR: TDX 日线返回空：bj920000（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[daily:tdx] 50/5572 完成
+[daily:tdx] 100/5572 完成
+[daily:tdx] 150/5572 完成
+[daily:tdx] 200/5572 完成
+[daily:tdx] 250/5572 完成
+[daily:tdx] 300/5572 完成
+[daily:tdx] 350/5572 完成
+[daily:tdx] 400/5572 完成
+[daily:tdx] 450/5572 完成
+[daily:tdx] 500/5572 完成
+[daily:tdx] 550/5572 完成
+[daily:tdx] 600/5572 完成
+[daily:tdx] 650/5572 完成
+[daily:tdx] 700/5572 完成
+[daily:tdx] 750/5572 完成
+[daily:tdx] 800/5572 完成
+[daily:tdx] 850/5572 完成
+[daily:tdx] 900/5572 完成
+[daily:tdx] 950/5572 完成
+[daily:tdx] 1000/5572 完成
+[daily:tdx] 1050/5572 完成
+[daily:tdx] 1100/5572 完成
+[daily:tdx] 1150/5572 完成
+[daily:tdx] 1200/5572 完成
+[daily:tdx] 1250/5572 完成
+[daily:tdx] 1300/5572 完成
+[daily:tdx] 1350/5572 完成
+[daily:tdx] 1400/5572 完成
+[daily:tdx] 1450/5572 完成
+[daily:tdx] 1500/5572 完成
+[daily:tdx] 1550/5572 完成
+[daily:tdx] 1600/5572 完成
+[daily:tdx] 1650/5572 完成
+[daily:tdx] 1700/5572 完成
+[daily:tdx] 1750/5572 完成
+[daily:tdx] 1800/5572 完成
+[daily:tdx] 1850/5572 完成
+[daily:tdx] 1900/5572 完成
+[daily:tdx] 1950/5572 完成
+[daily:tdx] 2000/5572 完成
+[daily:tdx] 2050/5572 完成
+[daily:tdx] 2100/5572 完成
+[daily:tdx] 2150/5572 完成
+[daily:tdx] 2200/5572 完成
+[daily:tdx] 2250/5572 完成
+[daily:tdx] 2300/5572 完成
+[daily:tdx] 2350/5572 完成
+[daily:tdx] 2400/5572 完成
+[daily:tdx] 2450/5572 完成
+[daily:tdx] 2500/5572 完成
+[daily:tdx] 2550/5572 完成
+[daily:tdx] 2600/5572 完成
+[daily:tdx] 2650/5572 完成
+[daily:tdx] 2700/5572 完成
+[daily:tdx] 2750/5572 完成
+[错误] TokenKey Insufficient Or Key Error
+  [2791/5572] sz000545 raw ERROR: TDX 日线返回空：sz000545（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [2792/5572] sz000546 qfq ERROR: TDX 日线返回空：sz000546（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [2792/5572] sz000546 raw ERROR: TDX 日线返回空：sz000546（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[daily:tdx] 2800/5572 完成
+[daily:tdx] 2850/5572 完成
+[daily:tdx] 2900/5572 完成
+[daily:tdx] 2950/5572 完成
+[daily:tdx] 3000/5572 完成
+[daily:tdx] 3050/5572 完成
+[错误] TokenKey Insufficient Or Key Error
+  [3060/5572] sz000968 qfq ERROR: TDX 日线返回空：sz000968（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3060/5572] sz000968 raw ERROR: TDX 日线返回空：sz000968（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3061/5572] sz000969 qfq ERROR: TDX 日线返回空：sz000969（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3061/5572] sz000969 raw ERROR: TDX 日线返回空：sz000969（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3062/5572] sz000970 qfq ERROR: TDX 日线返回空：sz000970（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3062/5572] sz000970 raw ERROR: TDX 日线返回空：sz000970（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3063/5572] sz000972 qfq ERROR: TDX 日线返回空：sz000972（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3063/5572] sz000972 raw ERROR: TDX 日线返回空：sz000972（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3064/5572] sz000973 qfq ERROR: TDX 日线返回空：sz000973（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3064/5572] sz000973 raw ERROR: TDX 日线返回空：sz000973（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3065/5572] sz000975 qfq ERROR: TDX 日线返回空：sz000975（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3065/5572] sz000975 raw ERROR: TDX 日线返回空：sz000975（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3066/5572] sz000977 qfq ERROR: TDX 日线返回空：sz000977（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3066/5572] sz000977 raw ERROR: TDX 日线返回空：sz000977（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3067/5572] sz000978 qfq ERROR: TDX 日线返回空：sz000978（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3067/5572] sz000978 raw ERROR: TDX 日线返回空：sz000978（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3068/5572] sz000980 qfq ERROR: TDX 日线返回空：sz000980（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3068/5572] sz000980 raw ERROR: TDX 日线返回空：sz000980（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3069/5572] sz000981 qfq ERROR: TDX 日线返回空：sz000981（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3069/5572] sz000981 raw ERROR: TDX 日线返回空：sz000981（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3070/5572] sz000983 qfq ERROR: TDX 日线返回空：sz000983（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3070/5572] sz000983 raw ERROR: TDX 日线返回空：sz000983（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3071/5572] sz000985 qfq ERROR: TDX 日线返回空：sz000985（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3071/5572] sz000985 raw ERROR: TDX 日线返回空：sz000985（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3072/5572] sz000987 qfq ERROR: TDX 日线返回空：sz000987（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3072/5572] sz000987 raw ERROR: TDX 日线返回空：sz000987（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3073/5572] sz000988 qfq ERROR: TDX 日线返回空：sz000988（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3073/5572] sz000988 raw ERROR: TDX 日线返回空：sz000988（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3074/5572] sz000989 qfq ERROR: TDX 日线返回空：sz000989（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3074/5572] sz000989 raw ERROR: TDX 日线返回空：sz000989（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3075/5572] sz000990 qfq ERROR: TDX 日线返回空：sz000990（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3075/5572] sz000990 raw ERROR: TDX 日线返回空：sz000990（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3076/5572] sz000993 qfq ERROR: TDX 日线返回空：sz000993（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3076/5572] sz000993 raw ERROR: TDX 日线返回空：sz000993（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3077/5572] sz000995 qfq ERROR: TDX 日线返回空：sz000995（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3077/5572] sz000995 raw ERROR: TDX 日线返回空：sz000995（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3078/5572] sz000997 qfq ERROR: TDX 日线返回空：sz000997（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3078/5572] sz000997 raw ERROR: TDX 日线返回空：sz000997（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3079/5572] sz000998 qfq ERROR: TDX 日线返回空：sz000998（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[错误] TokenKey Insufficient Or Key Error
+  [3079/5572] sz000998 raw ERROR: TDX 日线返回空：sz000998（若未配置 Token 请检查 TdxAiData.ini [Token]）
+  [cooldown] 连续 20 次失败，休眠 1800s 等限流重置

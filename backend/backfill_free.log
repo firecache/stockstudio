@@ -1,0 +1,102 @@
+[daily:free] 50/5572 完成
+[daily:free] 100/5572 完成
+[daily:free] 150/5572 完成
+[daily:free] 200/5572 完成
+[daily:free] 250/5572 完成
+[daily:free] 300/5572 完成
+[daily:free] 350/5572 完成
+[daily:free] 400/5572 完成
+[daily:free] 450/5572 完成
+[daily:free] 500/5572 完成
+[daily:free] 550/5572 完成
+  [567/5572] sh600293 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600293,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+[daily:free] 600/5572 完成
+[daily:free] 650/5572 完成
+[daily:free] 700/5572 完成
+[daily:free] 750/5572 完成
+[daily:free] 800/5572 完成
+[daily:free] 850/5572 完成
+[daily:free] 900/5572 完成
+[daily:free] 950/5572 完成
+[daily:free] 1000/5572 完成
+[daily:free] 1050/5572 完成
+[daily:free] 1100/5572 完成
+[daily:free] 1150/5572 完成
+[daily:free] 1200/5572 完成
+[daily:free] 1250/5572 完成
+[daily:free] 1300/5572 完成
+[daily:free] 1350/5572 完成
+[daily:free] 1400/5572 完成
+[daily:free] 1450/5572 完成
+[daily:free] 1500/5572 完成
+[daily:free] 1550/5572 完成
+[daily:free] 1600/5572 完成
+[daily:free] 1650/5572 完成
+[daily:free] 1700/5572 完成
+[daily:free] 1750/5572 完成
+[daily:free] 1800/5572 完成
+[daily:free] 1850/5572 完成
+[daily:free] 1900/5572 完成
+[daily:free] 1950/5572 完成
+[daily:free] 2000/5572 完成
+[daily:free] 2050/5572 完成
+[daily:free] 2100/5572 完成
+[daily:free] 2150/5572 完成
+[daily:free] 2200/5572 完成
+[daily:free] 2250/5572 完成
+[daily:free] 2300/5572 完成
+[daily:free] 2350/5572 完成
+[daily:free] 2400/5572 完成
+[daily:free] 2450/5572 完成
+[daily:free] 2500/5572 完成
+[daily:free] 2550/5572 完成
+[daily:free] 2600/5572 完成
+[daily:free] 2650/5572 完成
+[daily:free] 2700/5572 完成
+[daily:free] 2750/5572 完成
+[daily:free] 2800/5572 完成
+[daily:free] 2850/5572 完成
+[daily:free] 2900/5572 完成
+[daily:free] 2950/5572 完成
+[daily:free] 3000/5572 完成
+[daily:free] 3050/5572 完成
+[daily:free] 3100/5572 完成
+[daily:free] 3150/5572 完成
+[daily:free] 3200/5572 完成
+[daily:free] 3250/5572 完成
+  [3266/5572] sz002067 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002067,day,2010-01-01,2023-06-18,800,qfq (HTTP 501)
+  [3266/5572] sz002067 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002067,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3267/5572] sz002068 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002068,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3267/5572] sz002068 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002068,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3268/5572] sz002069 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002069,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3268/5572] sz002069 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002069,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3269/5572] sz002072 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002072,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3269/5572] sz002072 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002072,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3270/5572] sz002073 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002073,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3270/5572] sz002073 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002073,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3271/5572] sz002074 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002074,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3271/5572] sz002074 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002074,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3272/5572] sz002075 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002075,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3272/5572] sz002075 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002075,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3273/5572] sz002076 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002076,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3273/5572] sz002076 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002076,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3274/5572] sz002077 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002077,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3274/5572] sz002077 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002077,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3275/5572] sz002078 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002078,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3275/5572] sz002078 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002078,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3276/5572] sz002079 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002079,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3276/5572] sz002079 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002079,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3277/5572] sz002080 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002080,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3277/5572] sz002080 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002080,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3278/5572] sz002081 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002081,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3278/5572] sz002081 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002081,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3279/5572] sz002082 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002082,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3279/5572] sz002082 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002082,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3280/5572] sz002083 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002083,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3280/5572] sz002083 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002083,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3281/5572] sz002084 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002084,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3281/5572] sz002084 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002084,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3282/5572] sz002085 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002085,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3282/5572] sz002085 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002085,day,2010-01-01,2026-10-11,800,raw (HTTP 501)
+  [3283/5572] sz002086 qfq ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002086,day,2010-01-01,2026-10-11,800,qfq (HTTP 501)
+  [3283/5572] sz002086 raw ERROR: tencent fetch failed: https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002086,day,2010-01-01,2026-10-11,800,raw (HTTP 501)

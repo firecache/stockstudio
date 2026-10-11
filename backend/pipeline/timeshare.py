@@ -17,8 +17,15 @@ def backfill(symbols, source="free"):
             latest_date = cal[-1] if cal else None
         except Exception:
             latest_date = None
+    consecutive_err = 0
     for i, sym in enumerate(symbols, 1):
         code = sym["code"]
+        # 断点续传：已有该股分时则跳过
+        if (store.TIMESHARE_DIR / code).exists():
+            consecutive_err = 0
+            if i % 50 == 0 or i == total:
+                print(f"[timeshare:{source}] {i}/{total} 完成")
+            continue
         try:
             if source == "tdx":
                 if not latest_date:
@@ -28,8 +35,14 @@ def backfill(symbols, source="free"):
                 rows, date, qt = timeshare(code)
             if rows and date:
                 store.save_timeshare(code, date, rows)
+            consecutive_err = 0
         except Exception as e:
+            consecutive_err += 1
             print(f"  [{i}/{total}] {code} ERROR: {e}")
+            if consecutive_err >= 20:
+                print(f"  [cooldown] 连续 {consecutive_err} 次失败，休眠 300s 等腾讯限流重置")
+                time.sleep(300)
+                consecutive_err = 0
         if i % 50 == 0 or i == total:
             print(f"[timeshare:{source}] {i}/{total} 完成")
         time.sleep(0.1 if source == "free" else 0.05)

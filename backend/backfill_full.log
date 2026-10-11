@@ -1,0 +1,9 @@
+[错误] Invalid server response
+  [1/5572] bj920000 qfq ERROR: TDX 日线返回空：bj920000（若未配置 Token 请检查 TdxAiData.ini [Token]）
+[daily:tdx] 50/5572 完成
+[daily:tdx] 100/5572 完成
+[daily:tdx] 150/5572 完成
+[daily:tdx] 200/5572 完成
+[daily:tdx] 250/5572 完成
+[daily:tdx] 300/5572 完成
+[daily:tdx] 350/5572 完成

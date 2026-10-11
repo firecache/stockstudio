@@ -35,3 +35,7 @@ export function getQuote(codes) {
   const list = Array.isArray(codes) ? codes.join(',') : codes
   return request(`/quote?codes=${list}`)
 }
+
+export function getMarket() {
+  return request('/market')
+}
